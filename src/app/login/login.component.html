@@ -1,0 +1,8 @@
+<div>
+  <label for="user">User email:</label>
+  <input type="email" id="user" name="user" [(ngModel)]="mail" required>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" [(ngModel)]="password" required>
+  <button type="button" (click)="loginauthenticate(mail,password)">Login</button>
+</div>
