@@ -1,1 +1,9 @@
-<p>profile works!</p>
+
+<div>
+    <label for="email">Email</label>
+    <input type="email" placeholder="Email">
+    <label for="role">Role</label>
+    <input type="text" placeholder="Enter your role" [(ngModel)]="role">
+    <button type="submit" (click)="profileauthenticate(role)" >login</button>
+    <button type="submit" (click)="logout()">logout</button>
+</div>

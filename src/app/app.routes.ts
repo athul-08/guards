@@ -4,12 +4,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SettingsComponent } from './settings/settings.component';
+import { profileGuard } from './profile.guard';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent,canActivate: [authGuard] },
   { path: 'profile', component: ProfileComponent },
-  { path: 'settings', component: SettingsComponent },
+  { path: 'settings', component: SettingsComponent ,canMatch: [profileGuard]},
   
 ];
